@@ -113,8 +113,7 @@ raise 语句的基本语法格式为： ·raise [exceptionName [(reason)]]`
 import random
 num=int(random.random()*100)
 print("猜测一个0~100之间的整数")
-a=1
-while a:
+while True:
     try:
         guess=int(input("请输入一个整形数据："))
     except ValueError as error:
@@ -126,7 +125,7 @@ while a:
         elif guess == num:
                 print('恭喜你猜对了！')
                 print('游戏结束。')
-                a = 0
+                break
         else:
                 print('太小')
 #猜测一个0~100之间的整数
