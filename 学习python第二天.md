@@ -106,6 +106,8 @@ while True:
             print("小了，小了")
 print("游戏结束，不玩儿啦！")
 ```
+* break **只能在while和for循环中使用**
+
 ###  7. continue 语句
 ```python
 for i in range(10):
