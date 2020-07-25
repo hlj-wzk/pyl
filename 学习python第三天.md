@@ -108,6 +108,41 @@ raise 语句的基本语法格式为： ·raise [exceptionName [(reason)]]`
 > random()是不能直接访问的，需要导入 random 模块，然后通过 random 静态对象调用该方法。
 
 [解题]
-```
+```python
+# _*_  coding:utf-8 _*_
+import random
+num=int(random.random()*100)
+print("猜测一个0~100之间的整数")
+a=1
+while a:
+    try:
+        guess=int(input("请输入一个整形数据："))
+    except ValueError as error:
+        print('错啦,请输入一个0~100的整数！')
+        continue
+    else:
+        if guess > num:
+                print('太大')
+        elif guess == num:
+                print('恭喜你猜对了！')
+                print('游戏结束。')
+                a = 0
+        else:
+                print('太小')
+#猜测一个0~100之间的整数
+ 请输入一个整形数据：50
+ 太小
+ 请输入一个整形数据：75
+ 太大
+ 请输入一个整形数据：63
+ 太大
+ 请输入一个整形数据：57
+ 太小
+ 请输入一个整形数据：60
+ 太小
+ 请输入一个整形数据：61
+ 恭喜你猜对了！
+ 游戏结束。
+
 
 ```
