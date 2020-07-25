@@ -145,4 +145,4 @@ while True:
 
 ```
 >## 本题总结
-> 通过本题，更熟练的掌握了条件循环语句，及个语句之间的套用，并且知道了`break`  `continue`语句只能在while中使用，若没有while则会产生 `SyntaxError: ‘break’ not properly in loop`  ` SyntaxError: ‘continue’ not properly in loop`的报错
+> 通过本题，更熟练的掌握了条件循环语句，及个语句之间的套用，并且知道了`break`  `continue`语句只能在while中使用，若没有while则会产生 `SyntaxError: ‘break’ not properly in loop`  ` SyntaxError: ‘continue’ not properly in loop`的报错。
