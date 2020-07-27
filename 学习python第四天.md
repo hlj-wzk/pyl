@@ -230,6 +230,7 @@ x.sort(key=lambda a: a[0])
 print(x)
 # [(1, 3), (2, 2), (3, 4), (4, 1)]
 ```
+***
 ### 练习题
 1、列表操作练习
 
@@ -278,4 +279,76 @@ print(lst)
 # [6, 5, 2, 15, 9, 9, 2, 9, 20, 8, 6, 5, 2]
 # [2, 2, 2, 5, 5, 6, 6, 8, 9, 9, 9, 15, 20]
 # [20, 15, 9, 9, 9, 8, 6, 6, 5, 5, 2, 2, 2]
+```
+
+2、修改列表
+
+问题描述：
+
+lst = [1, [4, 6], True]
+
+请将列表里所有数字修改成原来的两倍
+
+3、leetcode 852题 山脉数组的峰顶索引
+
+如果一个数组k符合下面两个属性，则称之为山脉数组
+
+数组的长度大于等于3
+
+存在$i$，$i$ >0 且$i<\operatorname{len}(k)-1$， 使得$$\mathrm{k}[0]<\mathrm{k}[1]<\ldots<\mathrm{k}[\mathrm{i}-1]<\mathrm{k}[\mathrm{j}]>\mathrm{k}[\mathrm{i}+1] \ldots>\mathrm{k}[\operatorname{len}(\mathrm{k})-1]$$
+
+这个$i$就是顶峰索引。
+
+现在，给定一个山脉数组，求顶峰索引。
+
+示例:
+
+输入：[1, 3, 4, 5, 3]
+
+输出：True
+
+输入：[1, 2, 4, 6, 4, 5]
+
+输出：False
+```python
+def double_list(lst):
+    for index, value in enumerate(lst):
+        if isinstance(value, bool):
+            continue
+        if isinstance(value, (int, float)):
+            lst[index] *= 2
+        if isinstance(value, list):
+            # 递归
+            double_list(value)
+
+
+if __name__ == '__main__':
+    lst = lst = [1, [4, 6], True]
+    double_list(lst)
+    print(lst)
+```
+
+3、leetcode 852题 山脉数组的峰顶索引
+
+如果一个数组k符合下面两个属性，则称之为山脉数组
+
+数组的长度大于等于3
+
+存在$i$，$i$ >0 且$i<\operatorname{len}(k)-1$， 使得$$\mathrm{k}[0]<\mathrm{k}[1]<\ldots<\mathrm{k}[\mathrm{i}-1]<\mathrm{k}[\mathrm{j}]>\mathrm{k}[\mathrm{i}+1] \ldots>\mathrm{k}[\operatorname{len}(\mathrm{k})-1]$$
+
+这个$i$就是顶峰索引。
+
+现在，给定一个山脉数组，求顶峰索引。
+
+示例:
+
+输入：[1, 3, 4, 5, 3]
+
+输出：True
+
+输入：[1, 2, 4, 6, 4, 5]
+
+输出：False
+```python
+
 ```
